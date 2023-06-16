@@ -1,0 +1,5 @@
+db:
+  host: postgres-service
+  port: 5432
+  user: postgres
+  password: postgres

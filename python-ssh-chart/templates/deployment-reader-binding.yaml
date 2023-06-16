@@ -1,0 +1,13 @@
+# templates/deployment-reader-binding.yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: deployment-reader-role-binding
+subjects:
+- kind: ServiceAccount
+  name: default
+  namespace: default
+roleRef:
+  kind: Role
+  name: deployment-reader-role
+  apiGroup: rbac.authorization.k8s.io

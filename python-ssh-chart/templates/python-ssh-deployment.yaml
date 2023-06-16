@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-ssh-interpreter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-ssh
+  template:
+    metadata:
+      labels:
+        app: python-ssh
+    spec:
+      containers:
+        - name: python-ssh-container
+          image: farhadrezazadeh/python-ssh:latest
+          ports:
+            - containerPort: 22
+          envFrom:
+            - configMapRef:
+                name: python-ssh-configmap
+
+{{/*          command: [ "tail", "-f", "/dev/null" ]*/}}

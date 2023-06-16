@@ -1,0 +1,10 @@
+# templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: python-ssh-configmap
+data:
+  DB_HOST: "{{ .Values.db.host }}"
+  DB_PORT: "{{ .Values.db.port }}"
+  DB_USER: "{{ .Values.db.user }}"
+  DB_PASSWORD: "{{ .Values.db.password }}"

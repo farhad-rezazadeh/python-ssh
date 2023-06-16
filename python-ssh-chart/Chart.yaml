@@ -1,0 +1,4 @@
+apiVersion: v2
+name: python-ssh-chart
+description: A Helm chart for deploying Python interactive pod
+version: 0.1.0

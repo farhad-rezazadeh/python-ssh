@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-ssh-interpreter-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 22
+      targetPort: 22
+  selector:
+    app: python-ssh
